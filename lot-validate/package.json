@@ -1,0 +1,13 @@
+{
+  "name": "lot-validate",
+  "version": "1.0.3",
+  "description": "Basic class for response.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "\"Elivelton C. Gama\"",
+  "license": "ISC",
+  "dependencies": {}
+}

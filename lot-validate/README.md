@@ -23,7 +23,7 @@ Focused on backend, lot-validate has the following characteristics
     const { DefaultResponse, SchemaValidate  } = require("lot-validate")
 
 ### Using
-> #### For response with error
+> #### For response with error 
 >
 >```node
 >    var  response  =  new  DefaultResponse();
@@ -52,10 +52,12 @@ ____
 >
 >
 >```node
->    var  response  =  SchemaValidate.Validate(User, _req.body);
->    if (!response.hasError)
->       response.data  =  User.create(_req.body);
->    return  response;
+>    var response = SchemaValidate.Validate(User, _req.body);
+>    if (!response.hasError){
+>        var dataUser = await User.create(_req.body)
+>        response.success("Salvo com sucesso!", dataUser);
+>    }
+>    return response;
 >```
 
 >
@@ -63,17 +65,16 @@ ____
 >
 >```node
 >    {
->	"errors": [],
->	"messageOk": "",
->	"data": {
->		"_id": "5b11d3783002070f2026fee2",
->		"email": "eli@ht.com",
->		"password": "123",
->		"username": "eligama",
->		"__v": 0
->	},
->	"hasError": false
->}
+>    "errors": [],
+>    "messageOk": "Salvo com sucesso!",
+>    "data": {
+>        "_id": "5b11da28775d7939748f7d47",
+>        "email": "eliveltongama@hotmail.com",
+>        "password": "123456",
+>        "username": "elivelton.gama"
+>    },
+>    "hasError": false
+>    }
 >```
 
 

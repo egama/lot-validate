@@ -23,12 +23,12 @@ Focused on backend, lot-validate has the following characteristics
     const { DefaultResponse, SchemaValidate  } = require("lot-validate")
 
 ### Using
->#### For response with error
+> #### For response with error
 >
 >```node
 >    var  response  =  new  DefaultResponse();
 >    if(1 != 2)
-	>     	response.addErro("Different number", "number_field");
+>      response.addErro("Different number", "number_field");
 >```
 >
 >>Response:

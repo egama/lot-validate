@@ -15,15 +15,7 @@ class DefaultResponse {
         this.errors = [];
         this.messageOk = "";
         this.data = {};
-    }
-
-    /**
-     * en-Us: Attribute if has error 
-     * pt-Br: Retorna se tem erro ou não
-     * @returns {boolean} if has error at object
-     */
-    get hasError() {
-        return this.errors.length > 0;
+        this.hasError = false;
     }
 
     /**
@@ -37,6 +29,7 @@ class DefaultResponse {
         error.error = _error;
         error.field = _field;
         this.errors.push(error);
+        this.hasError = this.errors.length > 0;
     }
 
     /**
@@ -45,12 +38,10 @@ class DefaultResponse {
      * @param {string} _message Mensagem de sucesso
      * @param {object} _data Objeto de retorno 
      */
-    success(_message, _data){
+    success(_message, _data) {
         this.messageOk = _message;
         this.data = _data;
     }
-
-
 }
 
 module.exports.DefaultResponse = DefaultResponse;

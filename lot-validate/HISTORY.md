@@ -1,3 +1,9 @@
+2.0.1 / 2018-06-02
+==================
+
+  * Add multiple errors
+  * Perform multiple validations
+
 2.0.0 / 2018-06-01
 ==================
 

@@ -1,6 +1,6 @@
 {
   "name": "lot-validate",
-  "version": "2.0.0", 
+  "version": "2.0.1",
   "description": "Best way to validate your mongo Schemas and best practices of response API.",
   "main": "index.js",
   "scripts": {

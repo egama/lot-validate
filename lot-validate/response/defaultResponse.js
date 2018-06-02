@@ -33,6 +33,17 @@ class DefaultResponse {
     }
 
     /**
+     * en-Us: Method for ser Multiple erros
+     * pt-Br: Método que lança multiplos error
+     * @param {Array<ErrorsResponse>} _errors 
+     */
+    addErroRange(_errors) {
+        _errors.forEach(x => {
+            this.addErro(x.error, x.field);
+        });
+    }
+
+    /**
      * en-Us: Method for set object with success
      * pt-Br: Método que lança objeto de sucesso
      * @param {string} _message Mensagem de sucesso

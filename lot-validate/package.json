@@ -1,13 +1,21 @@
 {
   "name": "lot-validate",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Best way to validate your mongo Schemas and best practices of response API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords":  ["lot", "validate", "mongoose", "mongo", "mongo db", "database", "validate", "validation" , "valid", "node", "node-validate"],
   "author": "\"Elivelton C. Gama\"",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egama/lot-validate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/egama/lot-validate/issues"
+  },
+  "homepage": "https://github.com/egama/lot-validate#readme"
 }

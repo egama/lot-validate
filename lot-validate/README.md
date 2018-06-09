@@ -25,7 +25,7 @@ Focused on backend, lot-validate has the following characteristics
 ### Using
 > #### For response with error 
 >
->```node
+>```javascript
 >    var  response  =  new  DefaultResponse();
 >    if(1 != 2)
 >      response.addErro("Different number", "number_field");
@@ -33,7 +33,7 @@ Focused on backend, lot-validate has the following characteristics
 >
 >>Response:
 >
->```node
+>```javascript
 >    {
 >	"errors": [
 >		{
@@ -51,7 +51,7 @@ ____
 >#### For response with success
 >
 >
->```node
+>```javascript
 >    var response = SchemaValidate.Validate(User, _req.body);
 >    if (!response.hasError){
 >        var dataUser = await User.create(_req.body)
@@ -63,7 +63,7 @@ ____
 >
 >>Response:
 >
->```node
+>```javascript
 >    {
 >    "errors": [],
 >    "messageOk": "Salvo com sucesso!",
@@ -83,7 +83,7 @@ ____
 >#### Validating mongo Schema
 >
 >
-> ```node
+> ```javascript
 >    public DefaultResponse validating(myObjectRequest)
 >	{
 >			return SchemaValidate.Validate(mongoSchema, myObjectRequest);
@@ -96,7 +96,7 @@ ____
 Below is the return class and its attributes
 >#### DefaultResponse
 >
->```node
+>```javascript
 >	class DefaultResponse {
 >		errors: ErrorsResponse[]
 >		messageOk: string;
@@ -107,7 +107,7 @@ Below is the return class and its attributes
 
 >#### ErrorsResponse 
 >
->```node
+>```javascript
 >	class ErrorsResponse {
 >		field : string
 >		error: string;
